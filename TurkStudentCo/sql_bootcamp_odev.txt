@@ -1,0 +1,36 @@
+a. Belirli Kolonları Seçme
+
+SELECT firstname AS FirstName, lastname AS LastName, salary AS Salary
+FROM EMPLOYEES;
+
+SELECT ile istediğimiz kolonları seçiyoruz. FROM ile de istediğimiz kolonların bulunduğu tabloyu belirtiyoruz.
+
+b. DISTINCT Komutu ile Tekrarları Önleme
+
+SELECT DISTINCT department AS Department
+FROM EMPLOYEES;
+
+DISTINCT kullandığımızda employeelerin çalıştığı departmanlar tekrarlanmadan yazılıyor.
+
+c. Belirli Bir Departmana Ait Çalışanları Listeleme
+
+SELECT *
+FROM EMPLOYEES
+WHERE department = 'IT';
+
+WHERE kullanarak department adının IT olması koşulunu koyduk ve * kullanarak bütün çalışan bilgilerini getirdik.
+
+d. Maaşa Göre Sıralama
+
+SELECT *
+FROM EMPLOYEES
+ORDER BY salary DESC;
+
+ORDER BY ve DESC kullanarak maaşları büyükten küçüğe yani azalarak sıraladık.
+
+e. Kolonları Birleştirme (Concatenation)
+
+SELECT firstname ||''|| lastname AS FullName
+FROM EMPLOYEES;
+
+FirstName ve LastName kolonlarını FullName adında yeni bir kolonda birleştirdik.
